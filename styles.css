@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+:root {
+  --white: hsl(0, 0%, 100%);
+
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-cobalt-blue: hsl(241, 81%, 54%);
+
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+
+  --light-red: hsl(0, 100%, 67%);
+  --orange-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 18px;
+}
+.card-container {
+  display: flex;
+  width: 735px;
+  height: 510px;
+  border-radius: 32px;
+  -webkit-box-shadow: 27px 27px 50px -31px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 27px 27px 50px -31px rgba(0, 0, 0, 0.75);
+  box-shadow: 27px 27px 50px -31px rgba(0, 0, 0, 0.75);
+}
+.card-column {
+  flex: 1;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    0deg,
+    var(--light-cobalt-blue) 0%,
+    var(--light-slate-blue) 100%
+  );
+  border-radius: 32px;
+  padding: 44px;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-column:last-of-type {
+  background: none;
+}
+.card-column span {
+  text-align: center;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--light-lavender);
+}
+.score-container {
+  background: linear-gradient(
+    0deg,
+    var(--persian-blue) 0%,
+    var(--violet-blue) 100%
+  );
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.score-container h1 {
+  font-size: 4rem;
+  color: var(--white);
+  line-height: 72px;
+}
+.score-container h2 {
+  font-size: 1rem;
+  color: var(--light-lavender);
+}
+.card-column h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--white);
+}
+.card-column p {
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--light-lavender);
+}
+.summary-title {
+  color: var(--dark-gray-blue);
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 100%;
+}
+.summary-scorebox {
+  background-color: #fff6f5;
+  color: var(--light-red);
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  width: 100%;
+  height: 45px;
+  border-radius: 9px;
+  align-items: center;
+}
+.allscores {
+  width: 100%;
+  height: 226px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.scorebox-header {
+  display: flex;
+}
+.scorebox-title {
+  margin-left: 14px;
+}
+.score {
+  display: flex;
+}
+.score span {
+  font-size: 1rem;
+  color: var(--dark-gray-blue);
+}
+.score span:last-of-type {
+  font-size: 1rem;
+  color: lightgray;
+}
+
+.summary-scorebox:nth-of-type(2) {
+  background-color: #fffbf2;
+  color: var(--orange-yellow);
+}
+
+.summary-scorebox:nth-of-type(3) {
+  background-color: #f2fbfa;
+  color: var(--green-teal);
+}
+
+.summary-scorebox:nth-of-type(4) {
+  background-color: #f3f3fd;
+  color: var(--light-slate-blue);
+}
+
+.card-column button {
+  width: 100%;
+  height: 46px;
+  border-radius: 1000px;
+  border: none;
+  outline: none;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-duration: 0.5s;
+  cursor: pointer;
+  background-color: var(--dark-gray-blue);
+  color: var(--white);
+  font-weight: 700;
+}
+.card-column button:hover {
+  background: linear-gradient(
+    0deg,
+    var(--light-cobalt-blue) 0%,
+    var(--light-slate-blue) 100%
+  );
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-duration: 0.5s;
+}
+
+@media screen and (max-width: 850px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .card-container {
+    flex-direction: column;
+    width: 375px;
+    height: 809px;
+  }
+  .card-column:first-of-type {
+    height: 356px;
+  }
+  .card-column span {
+    font-size: 1rem;
+  }
+  .score-container {
+    height: 140px;
+    width: 140px;
+  }
+}
